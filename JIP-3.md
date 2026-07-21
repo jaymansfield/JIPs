@@ -165,7 +165,7 @@ The following types are defined:
 The first message sent on each connection to the telemetry server should contain information about
 the connecting node:
 
-    0 (Single byte, telemetry protocol version)
+    1 (Single byte, telemetry protocol version)
     JAM Parameters
     Header Hash (Genesis header hash)
     Peer ID
@@ -438,7 +438,7 @@ Emitted when a block announcement stream (UP 0) is opened.
 Emitted when a block announcement stream (UP 0) is closed. This need not be emitted if the stream
 is closed due to disconnection.
 
-    Peer ID
+    Event ID (ID of the corresponding "block announcement stream opened" event)
     Connection Side (The side that closed the stream)
     Reason
 
